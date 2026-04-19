@@ -1,0 +1,19 @@
+ROOM
+name: Control Room
+desc: Flickering screens and alarms
+exit: east 1
+item: key Key
+item: cloth Clothing
+ROOM
+name: Flooded Hallway
+desc: Water fills the corridor
+flooded: true
+fixable: true
+exit: west 0
+exit: east 2
+ROOM
+name: Escape Pod
+desc: Your way out
+locked: true
+requiredKey: key
+exit: west 1

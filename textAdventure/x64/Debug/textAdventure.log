@@ -1,0 +1,3 @@
+﻿  LevelLoader.cpp
+C:\Users\Kinga\Desktop\mentoring\textAdventure\textAdventure\LevelLoader.cpp(111,38): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  textAdventure.vcxproj -> C:\Users\Kinga\Desktop\mentoring\textAdventure\x64\Debug\textAdventure.exe
