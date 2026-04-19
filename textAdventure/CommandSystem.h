@@ -5,13 +5,15 @@
 
 using namespace std;
 
-struct Game;
+class Game;
 struct ICommand;
 
-struct CommandSystem
+class CommandSystem
 {
+private:
 	//making a pointer to the function
 	unordered_map<string, ICommand*> commands;
+public:
     void HandleInput(Game& game, const string& input);
     CommandSystem();
 

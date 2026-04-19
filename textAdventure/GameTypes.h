@@ -3,12 +3,14 @@
 #include <vector>
 #include <map>
 using namespace std;
+
 enum class ItemType { Key, Clothing };
 
 struct Item {
     string name;
     ItemType type;
 };
+
 struct Room
 {
     string name;

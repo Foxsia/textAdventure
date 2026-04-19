@@ -6,10 +6,7 @@ using namespace std;
 void loadLevelFromFile(Game& game, const string& filename)
 {
 
-    game.world.clear();
-    game.player.currentLocation = 0;
-    game.player.oxygen = 100;
-    game.player.inventory.clear();
+    game.reset();
 
     ifstream file(filename);
     if (!file)
@@ -27,7 +24,7 @@ void loadLevelFromFile(Game& game, const string& filename)
 
         if (line == "ROOM")
         {
-            if (!currentRoom.name.empty())game.world.push_back(currentRoom);
+            if (!currentRoom.name.empty())game.getWorld().push_back(currentRoom);
 
             currentRoom = Room(); // reset
         }
@@ -106,9 +103,9 @@ void loadLevelFromFile(Game& game, const string& filename)
         }
     }
 
-    if (!currentRoom.name.empty())game.world.push_back(currentRoom);
+    if (!currentRoom.name.empty())game.getWorld().push_back(currentRoom);
 
-    game.winRoom = game.world.size() - 1;
+    game.setWinRoom(game.getWorld().size() - 1);
 }
 
 void loadLevel(Game& game, int level) {

@@ -154,3 +154,14 @@ void Game::useItem(const string& itemName) {
     cout << "You don't have that item.\n";
     return;
 }
+
+void Game::reset()
+{
+    world.clear();
+
+    player.currentLocation = 0;
+    player.oxygen = 100;
+    player.inventory.clear();
+
+    winRoom = 0;
+}

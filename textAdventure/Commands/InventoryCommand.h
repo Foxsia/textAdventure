@@ -8,6 +8,6 @@ struct InventoryCommand : ICommand
 {
 	void Execute(Game& game, const vector<string>& args) override
 	{
-		game.player.showInventory();
+		game.getPlayer().showInventory();
 	}
 };

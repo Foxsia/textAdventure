@@ -9,13 +9,13 @@ void runLevel(Game& game, CommandSystem& commandSystem, int level) {
     loadLevel(game, level);
     cout << "WARNING: STATION FLOODING\n";
 
-    while (game.gameRunning && game.player.oxygen > 0) {
+    while (game.isGameRunning() && game.getPlayer().oxygen > 0) {
 
         game.displayRoom();
 
-        if (game.player.currentLocation == game.winRoom) {
+        if (game.getPlayer().currentLocation == game.getWinRoom()) {
             cout << "\n YOU ESCAPED! YOU WIN!\n";
-            game.gameRunning = false;
+            game.setGameRunning(false);
             return;
         }
         cout << "What would you like to do?\n> ";
@@ -26,7 +26,7 @@ void runLevel(Game& game, CommandSystem& commandSystem, int level) {
         game.applyEnvironment();
     }
 
-    if (game.player.oxygen <= 0) {
+    if (game.getPlayer().oxygen <= 0) {
         cout << "\nYou ran out of oxygen... GAME OVER\n";
     }
 }

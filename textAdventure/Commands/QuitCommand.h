@@ -8,6 +8,6 @@ struct QuitCommand : ICommand
 {
 	void Execute(Game& game, const vector<string>& args) override
 	{
-		game.gameRunning = false;
+		game.setGameRunning(false);
 	}
 };
