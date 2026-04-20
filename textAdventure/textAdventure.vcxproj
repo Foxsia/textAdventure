@@ -130,6 +130,8 @@
     <ClCompile Include="CommandSystem.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="LevelLoader.cpp" />
+    <ClCompile Include="LevelParser.cpp" />
+    <ClCompile Include="LineHandlers.cpp" />
     <ClCompile Include="textAdventure.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -144,7 +146,10 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameTypes.h" />
     <ClInclude Include="ICommand.h" />
+    <ClInclude Include="ILineHandler.h" />
     <ClInclude Include="LevelLoader.h" />
+    <ClInclude Include="LevelParser.h" />
+    <ClInclude Include="LineHandlers.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Levels\level1.txt" />
