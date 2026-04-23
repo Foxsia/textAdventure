@@ -2,11 +2,14 @@
 #include "Game.h"
 #include "LevelLoader.h"
 #include "CommandSystem.h"
+#include "Menu.h"
 
 using namespace std;
 
 void runLevel(Game& game, CommandSystem& commandSystem, int level) {
     loadLevel(game, level);
+
+    if (!game.isGameRunning()) return;
     cout << "WARNING: STATION FLOODING\n";
 
     while (game.isGameRunning() && game.getPlayer().oxygen > 0) {
@@ -36,6 +39,9 @@ int main()
 {
     Game game;
     CommandSystem commandSystem;
-    runLevel(game, commandSystem, 1);
+
+    int level = chooseLvl();
+
+    runLevel(game, commandSystem, level);
     return 0;
 }

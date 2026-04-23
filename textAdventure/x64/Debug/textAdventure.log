@@ -1,2 +1,5 @@
-﻿  LevelParser.cpp
+﻿  LevelLoader.cpp
+C:\Users\Kinga\Desktop\mentoring\textAdventure\textAdventure\LevelLoader.cpp(41,44): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  textAdventure.cpp
+  Generating Code...
   textAdventure.vcxproj -> C:\Users\Kinga\Desktop\mentoring\textAdventure\x64\Debug\textAdventure.exe

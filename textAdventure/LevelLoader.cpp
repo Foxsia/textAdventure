@@ -43,13 +43,14 @@ void loadLevelFromFile(Game& game, const string& filename)
 
 void loadLevel(Game& game, int level) {
 
-    switch (level) {
-    case 1:
-        loadLevelFromFile(game, "Levels/level1.txt");
-        break;
-    
-    default:
-        cout << "Unknown level!\n";
-        break;
+    string path = "Levels/level" + to_string(level) + ".txt";
+    ifstream file(path);
+
+    if (!file) {
+        cout << "Unknown level: " << level << endl;
+        game.setGameRunning(false);
+        return;
     }
+
+    loadLevelFromFile(game, path);
 }

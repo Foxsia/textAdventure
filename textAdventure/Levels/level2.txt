@@ -1,0 +1,27 @@
+ROOM
+name: Engine Room
+desc: Loud machinery and leaking pipes
+exit: east 1
+item: cloth Clothing
+
+ROOM
+name: Flooded Chamber
+desc: Water is pouring in from broken valves
+flooded: true
+fixable: true
+exit: west 0
+exit: east 2
+
+ROOM
+name: Storage Bay
+desc: Crates are floating in the water
+exit: west 1
+exit: east 3
+item: key Key
+
+ROOM
+name: Escape Submarine
+desc: A small sub ready to launch
+locked: true
+requiredKey: key
+exit: west 2
